@@ -1,1 +1,3 @@
-console.log("Entro index.js");
+document.addEventListener("DOMContentLoaded", ()=>{
+    
+});
