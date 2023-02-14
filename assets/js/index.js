@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function loadData() {
         console.log("Entro a load")
-        
+
         let data = JSON.parse(localStorage.getItem("data")) || [];
         data.forEach((empleado, index) => {
             let tr = document.createElement("tr");
@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 data-index="${index}">Eliminar</button>
             </td>
             `;
-        tableBody.appendChild(tr);
+            tableBody.appendChild(tr);
         });
     }
 
     //evento boton guardar .value lee los valores de listener
-    saveBtn.addEventListener("click", ()=> {
+    saveBtn.addEventListener("click", () => {
         const name = inputName.value;
         const puesto = inputPuesto.value;
         console.log(name);
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             name: name,
             puesto: puesto
         });
-        localStorage.setItem("data",JSON.stringify(data));
+        localStorage.setItem("data", JSON.stringify(data));
     });
     loadData();
 });
