@@ -13,50 +13,53 @@
 
 <body>
 
-    <body>
+    
+    <body data-bs-theme="dark">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <button type="button" class="btn btn-primary mt-3" id="changeThemeBtn">Cambiar tema</button>
+                    <button type="button" class="btn btn-success mt-3" id="changeThemeBtn">Cambiar tema</button>
                 </div>
             </div>
             <h1>CRUD en localstorage</h1>
-
-            <div class="col-md-12">
-                <form>
-                    <div class="form-group">
-
-                        <label for="inputName">Nombre</label>
-                        <input id="inputName" type="text" class="form-control" placeholder="Ingresa nombre">
-
-                        <label for="inputPuesto">Puesto</label>
-                        <input id="inputPuesto" type="text" class="form-control" placeholder="Ingresa Puesto">
-
-                    </div>
-                    <div class="row">
-                        <div class="col text-end">
-                            <button type="button" class="btn btn-primary mt-3" id="saveBtn">Guardar</button>
+    
+            <div class="row">
+    
+                <div class="col-md-12">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputName">Nombre</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Ingresa nombre">
+                            <label for="inputPuesto">Puesto</label>
+                            <input type="text" class="form-control" id="inputPuesto" placeholder="Ingresa Puesto">
                         </div>
-                    </div>
-                </form>
-
+                        <div class="row">
+                            <div class="col text-end">
+                                <button type="button" class="btn btn-primary mt-3" id="saveBtn">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+    
+                </div>
+    
+                <div class="col-md-12 mt-4">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Puesto</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                </div>
             </div>
-
-            <div class="col-md-12 mt-4">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Puesto</th>
-                            <th class="text-center">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableBody">
-                    </tbody>
-                </table>
-            </div>
+    
         </div>
+    
   
         <script src="assets/js/index.js"></script>
         </div>
